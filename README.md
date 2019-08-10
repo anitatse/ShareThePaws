@@ -1,34 +1,46 @@
 # ShareThePaws
 
-Pages:
+This web app was built in a group of 4 as part of a term project for the Relational Databases courses at the University of British Columbia. 
 
-Setup Notes:
-- need to set appropriate permissions for htdocs/temp and htdocs/upload directories for file upload to work successfully (this is assuming the application is run in xamppfiles)
+## Setup Notes
 
-Demo Examples:
+Need to set appropriate permissions for htdocs/temp and htdocs/upload directories for file upload to work successfully (this is assuming the application is run in xamppfiles)
 
-OWNER (bob)
+## Context
 
-1. Insert Operation: Add Walk Post
+The web app is modelling a simple dog walking service, where dog owners display their dogs and volunteers can request dogs to walk. An example user story: Fred (dog owner) walks his dog on his way to class/work, and wants a walker to meet him there. The walker, Sally, has time between her classes to play with a dog. She takes care of Rover(dog) for an hour, until Fred finishes and repossesses the canine. 
 
-3. Update Operation: Edit Walk Post (that hasn't been booked)
+There are 2 types of users for this system, a dog walker and dog owner. Owners are able to upload their dogs. 
 
-WALKER (joe)
+Volunteer dog walkers can browse through the selection of dogs and request a walk. Dog owners are able to accept a walk request, and leave a review once the walk is done. 
 
-4. Selection: Filter Walk Post by time
+We implemented this in HTML/CSS and PHP, utilizing the Computer Science department’s Oracle database
 
-6. Join: Filter Walk Posts by dog size
+### SQL Queries used: 
+As part of the project's criterias, the SQL Queries are shown:
 
-OWNER
+#### OWNER (bob)
 
-2. Delete Operation: Delete Walk Post, deletes all associated requests as well
+Insert Operation: Add Walk Post
 
-OTHER FEATURES
+Update Operation: Edit Walk Post (that hasn't been booked)
 
-5. Projection: Collections -> Dogs, select attributes to view
+#### WALKER (joe)
 
-7. Aggregation: Dog Walkers display average rating
+Selection: Filter Walk Post by time
 
-8. Nested aggregation with group-by: Collections -> Dog walkers, display count and average of ratings for all dog walkers
+Join: Filter Walk Posts by dog size
 
-9. Division: Collections -> Hall of Fame, display dog walkers who have walked all the dogs
+#### OWNER
+
+Delete Operation: Delete Walk Post, deletes all associated requests as well
+
+#### OTHER FEATURES
+
+Projection: Collections -> Dogs, select attributes to view
+
+Aggregation: Dog Walkers display average rating
+
+Nested aggregation with group-by: Collections -> Dog walkers, display count and average of ratings for all dog walkers
+
+Division: Collections -> Hall of Fame, display dog walkers who have walked all the dogs
